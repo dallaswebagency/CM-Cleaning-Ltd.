@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CM Cleaning - Professional Cleaning in Cold Lake &amp; Bonnyville</title>
+<meta name="description" content="CM Cleaning Ltd. is committed to providing an overall excellent cleaning experience to all our customers. Residential, commercial, industrial and construction cleaning in Cold Lake, Bonnyville and surrounding Lakeland areas.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#06103C;
+  --navy-2:#0C1F62;
+  --navy-3:#16307F;
+  --paper:#F6F3EC;
+  --bone:#ECE7DA;
+  --rule:#D9D2C0;
+  --ink:#10163A;
+  --muted:#4F5575;
+  --brass:#B8935A;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace;
+  --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:15px;padding:16px 28px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;transition:background .25s,color .25s,transform .25s}
+.btn:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.btn.brass{background:var(--brass);border-color:var(--brass);color:var(--navy)}
+.btn.brass:hover{background:#c9a56c;border-color:#c9a56c}
+
+/* top ribbon + header */
+.ribbon{background:var(--navy);color:#DDE2F4;font-size:13.5px}
+.ribbon .wrap{display:flex;justify-content:space-between;gap:16px;padding:10px 0;flex-wrap:wrap}
+.ribbon a{color:#fff;font-weight:600;border-bottom:1px solid var(--brass)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(246,243,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.logo img{height:56px;width:auto}
+nav.main>ul{display:flex;align-items:center;gap:6px}
+nav.main li{position:relative}
+nav.main>ul>li>a{display:flex;align-items:center;gap:6px;padding:10px 16px;font-weight:500;font-size:15.5px}
+nav.main>ul>li>a:hover{color:var(--navy-3)}
+nav.main .caret{width:9px;height:9px;transition:transform .2s}
+nav.main li:hover .caret,nav.main li:focus-within .caret{transform:rotate(180deg)}
+.sub{position:absolute;left:0;top:100%;min-width:250px;background:#fff;border:1px solid var(--rule);padding:10px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;box-shadow:0 24px 50px -24px rgba(6,16,60,.35)}
+li:hover>.sub,li:focus-within>.sub{opacity:1;visibility:visible;transform:none}
+.sub a{display:block;padding:10px 14px;font-size:15px}
+.sub a:hover{background:var(--paper);color:var(--navy-3)}
+.menu-btn{display:none;width:46px;height:46px;border:1.5px solid var(--navy);background:none;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:20px;height:2px;background:var(--navy);position:relative;transition:.25s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}
+.menu-open .menu-btn span::before{top:0;transform:rotate(45deg)}
+.menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+
+/* corner brackets: the brand motif */
+.corners{position:relative}
+.corners::before,.corners::after,.corners>.c3,.corners>.c4{content:"";position:absolute;width:34px;height:34px;pointer-events:none;z-index:3}
+.corners::before{top:-12px;left:-12px;border-top:3px solid var(--brass);border-left:3px solid var(--brass)}
+.corners::after{top:-12px;right:-12px;border-top:3px solid var(--brass);border-right:3px solid var(--brass)}
+.corners>.c3{bottom:-12px;left:-12px;border-bottom:3px solid var(--brass);border-left:3px solid var(--brass)}
+.corners>.c4{bottom:-12px;right:-12px;border-bottom:3px solid var(--brass);border-right:3px solid var(--brass)}
+
+/* panel fallback so empty image slots still look intentional */
+.panel{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--navy-2),var(--navy) 70%)}
+.panel::before{content:"";position:absolute;inset:0;background:url(images/logo.png) center/62% no-repeat;filter:brightness(0) invert(1);opacity:.07}
+.panel img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.hero{padding:72px 0 0;position:relative;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center}
+.hero .kicker{display:flex;align-items:center;gap:14px;color:var(--navy-3);margin-bottom:28px}
+.hero .kicker::before{content:"";width:44px;height:1.5px;background:var(--brass)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,7vw,98px);line-height:1.0;letter-spacing:-.02em;color:var(--navy)}
+h1 em{font-style:italic;font-weight:500;position:relative;white-space:nowrap}
+h1 em svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.3em;color:var(--brass);overflow:visible}
+.hero .lede{max-width:560px;margin-top:38px;font-size:18.5px;color:var(--muted)}
+.hero .lede b{color:var(--ink);font-weight:600}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-art{position:relative;padding:14px}
+.hero-art .panel{aspect-ratio:3/4}
+.hero-art .tag{position:absolute;left:-34px;bottom:46px;z-index:4;background:var(--paper);border:1px solid var(--rule);padding:20px 24px;max-width:290px;box-shadow:0 30px 50px -30px rgba(6,16,60,.5)}
+.hero-art .tag p{font-size:14.5px;line-height:1.5;margin-top:6px;color:var(--ink)}
+.hero-art .tag .mono{color:var(--navy-3)}
+.creds{margin-top:72px;border-top:1px solid var(--rule);background:var(--bone)}
+.creds ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 40px;padding:22px 0}
+.creds li{display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;color:var(--navy)}
+.creds svg{width:22px;height:22px;color:var(--brass);flex:none}
+
+/* services index */
+.services{padding:120px 0 130px;background:var(--paper)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px;flex-wrap:wrap}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5vw,66px);line-height:1.05;letter-spacing:-.015em;color:var(--navy)}
+h2 em{font-style:italic;font-weight:500}
+.sec-head p{max-width:380px;color:var(--muted)}
+.idx{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}
+.rows{border-top:1.5px solid var(--navy)}
+.row a{display:grid;grid-template-columns:64px 1fr 40px;gap:8px 20px;padding:36px 0;border-bottom:1px solid var(--rule);transition:padding .35s,background .35s}
+.row .num{font-family:var(--mono);font-size:14px;color:var(--brass);padding-top:12px;letter-spacing:.1em}
+.row h3{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.4vw,42px);line-height:1.12;color:var(--navy)}
+.row p{grid-column:2;color:var(--muted);max-width:520px;margin-top:6px}
+.row .tags{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.row .tags li{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--rule);padding:6px 12px;color:var(--navy);background:#fff}
+.row .go{grid-column:3;grid-row:1;align-self:start;margin-top:10px;width:40px;height:40px;border:1.5px solid var(--navy);display:grid;place-items:center;color:var(--navy);transition:.3s}
+.row .go svg{width:16px;height:16px}
+.row.active a{padding-left:18px}
+.row.active .go{background:var(--navy);color:#fff}
+.row.active .num{color:var(--navy)}
+.pane{position:sticky;top:116px}
+.pane .panel{aspect-ratio:3/4}
+.pane .slide{position:absolute;inset:0;opacity:0;transition:opacity .6s}
+.pane .slide.on{opacity:1}
+.pane .slide .label{position:absolute;left:20px;bottom:18px;z-index:2;color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.pane .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,16,60,.6))}
+
+/* meticulous */
+.detail{background:var(--navy);color:#DDE2F4;padding:130px 0;position:relative;overflow:hidden}
+.detail .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.detail h2{color:#fff}
+.detail h2 em{color:var(--brass)}
+.detail .big{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.35;color:#fff;margin:34px 0 0;max-width:520px}
+.detail .txt p{margin-top:22px;max-width:520px;color:#C7CEEA}
+.detail .txt p strong{color:#fff}
+.guar{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid rgba(255,255,255,.2)}
+.guar li{padding:20px 20px 0 0;font-family:var(--serif);font-size:21px;color:#fff;display:flex;flex-direction:column;gap:10px}
+.guar svg{width:22px;height:22px;color:var(--brass)}
+.badge-wrap{display:grid;place-items:center;position:relative;min-height:460px}
+.badge{width:min(420px,100%);aspect-ratio:1;position:relative}
+.badge .ring{position:absolute;inset:0;animation:spin 30s linear infinite}
+.badge .ring text{font-family:var(--mono);font-size:13.5px;fill:#fff;text-transform:uppercase}
+.badge .core{position:absolute;inset:17%;border-radius:50%;background:var(--paper);display:grid;place-items:center;padding:14%}
+.badge .core img{width:100%}
+.badge .dots{position:absolute;inset:6%;border-radius:50%;border:1px dashed rgba(184,147,90,.6)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* scale */
+.scale{background:var(--bone);padding:120px 0}
+.scale .top{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:end}
+.scale .years{font-family:var(--serif);font-weight:600;font-size:clamp(120px,19vw,260px);line-height:.8;color:var(--navy);letter-spacing:-.04em}
+.scale .years small{font-size:.34em;font-weight:500;font-style:italic;letter-spacing:0;margin-left:10px;color:var(--navy-3)}
+.scale .txt p{margin-top:20px;max-width:500px;color:var(--muted)}
+.ruler{margin-top:84px}
+.ruler .ends{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.ruler .end{display:flex;flex-direction:column;gap:14px;max-width:230px;color:var(--navy)}
+.ruler .end.r{align-items:flex-end;text-align:right}
+.ruler .end svg{height:130px;width:auto}
+.ruler .end.l svg{height:78px}
+.ruler .end span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.ruler .ends .mid{flex:1;align-self:flex-end;margin-bottom:12px;height:2px;background:var(--navy);position:relative;transform-origin:left;transform:scaleX(0);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.ruler.in .ends .mid{transform:scaleX(1)}
+.ruler .ends .mid::before{content:"";position:absolute;left:0;right:0;bottom:2px;height:14px;background:repeating-linear-gradient(90deg,var(--navy) 0 1.5px,transparent 1.5px 14px)}
+.ruler .ends .mid::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:26px;background:repeating-linear-gradient(90deg,var(--navy) 0 2px,transparent 2px 70px)}
+.scale .more{margin-top:56px}
+
+/* founder */
+.founder{padding:120px 0;background:var(--paper)}
+.founder .card{display:grid;grid-template-columns:auto 1fr auto;gap:56px;align-items:center;background:#fff;border:1px solid var(--rule);padding:56px}
+.founder .pic{position:relative;width:148px;height:148px}
+.founder .pic img{width:148px;height:148px;object-fit:cover;position:relative;z-index:2;border:5px solid #fff}
+.founder .pic::before{content:"";position:absolute;inset:14px -14px -14px 14px;background:var(--navy);z-index:1}
+.founder h3{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4vw,52px);line-height:1.1;color:var(--navy)}
+.founder .role{margin-top:8px;color:var(--navy-3)}
+.founder p.s{margin-top:18px;max-width:560px;color:var(--muted)}
+.founder .soc{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.founder .soc a{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1.5px solid var(--brass);padding-bottom:3px}
+.founder .soc a:hover{color:var(--navy-3)}
+
+/* book */
+.book{background:var(--navy);color:#fff;padding:120px 0 110px;position:relative;overflow:hidden;text-align:center}
+.book .mono{color:var(--brass)}
+.book .num{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(46px,10.4vw,148px);letter-spacing:-.025em;line-height:1.05;margin:22px 0 6px;color:#fff;transition:color .3s}
+.book .num:hover{color:var(--brass)}
+.book .swoosh{width:min(620px,70%);margin:0 auto;color:var(--brass);display:block}
+.book .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,28px);color:#C7CEEA;margin:34px 0 40px}
+.book .actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.book .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.book .btn.ghost:hover{background:#fff;color:var(--navy)}
+
+/* footer */
+footer{background:#040B2B;color:#B9C0DE;padding:84px 0 0;font-size:15.5px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:56px}
+footer .logo-w{height:70px;width:auto;filter:brightness(0) invert(1)}
+footer .about{margin-top:24px;max-width:360px;line-height:1.6}
+footer h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:22px}
+footer li{margin-bottom:11px}
+footer a:hover{color:#fff}
+footer .tel{display:block;font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:12px}
+footer .soc{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap}
+footer .soc a{border-bottom:1px solid rgba(184,147,90,.6);padding-bottom:2px;font-size:14px}
+footer .bar{margin-top:72px;border-top:1px solid rgba(255,255,255,.12);padding:24px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+footer .bar a{color:#fff;border-bottom:1px solid var(--brass)}
+
+/* responsive */
+@media (max-width:1040px){
+  .hero .grid,.idx,.detail .grid,.scale .top{grid-template-columns:1fr;gap:56px}
+  .hero-art{max-width:520px}
+  .hero-art .tag{left:12px}
+  .pane{display:none}
+  .badge-wrap{min-height:0}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .founder .card{grid-template-columns:auto 1fr}
+  .founder .soc{grid-column:1/-1;flex-direction:row;gap:24px;flex-wrap:wrap}
+}
+@media (max-width:900px){
+  .menu-btn{display:flex}
+  nav.main{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--rule);display:none;padding:12px 24px 24px;max-height:calc(100vh - 140px);overflow:auto}
+  .menu-open nav.main{display:block}
+  nav.main>ul{flex-direction:column;align-items:stretch;gap:0}
+  nav.main>ul>li>a{padding:14px 0;border-bottom:1px solid var(--rule);justify-content:space-between}
+  .sub{position:static;opacity:1;visibility:visible;transform:none;border:0;box-shadow:none;padding:0 0 8px 14px;background:none}
+  .header-cta{display:none}
+}
+@media (max-width:680px){
+  body{font-size:16.5px}
+  .wrap{width:calc(100% - 36px)}
+  .ribbon .wrap{justify-content:center;text-align:center}
+  .hero{padding-top:44px}
+  .hero-art .tag{position:relative;left:0;bottom:0;margin-top:-40px;margin-left:16px;max-width:none;margin-right:16px}
+  .creds ul{flex-direction:column}
+  .services,.detail,.scale,.founder{padding:84px 0}
+  .row a{grid-template-columns:40px 1fr 36px;padding:28px 0}
+  .row.active a{padding-left:0}
+  .guar{grid-template-columns:1fr}
+  .guar li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);flex-direction:row;align-items:center}
+  .ruler .end svg{height:84px}.ruler .end.l svg{height:52px}
+  .ruler .end span{font-size:10.5px}
+  .founder .card{grid-template-columns:1fr;padding:34px 26px;gap:34px}
+  footer .cols{grid-template-columns:1fr;gap:40px}
+  .book{padding:84px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .ruler .ends .mid{transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="ribbon">
+  <div class="wrap">
+    <span>Servicing Cold Lake, Bonnyville, and surrounding Lakeland areas.</span>
+    <span>Call Natalie Now: <a href="tel:+17802011199">(780) 201-1199</a></span>
+  </div>
+</div>
+
+<header class="site" id="top">
+  <div class="wrap">
+    <a class="logo" href="https://www.cmcleaning.ca/" aria-label="CM Cleaning Ltd. home"><img src="images/logo.png" alt="CM Cleaning Ltd." width="132" height="56"></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span></button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <ul>
+        <li>
+          <a href="https://www.cmcleaning.ca/about/">About <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3l4 4 4-4"/></svg></a>
+          <ul class="sub">
+            <li><a href="https://www.cmcleaning.ca/about/">About Us</a></li>
+            <li><a href="https://www.cmcleaning.ca/products/">Benefect Products</a></li>
+            <li><a href="https://www.cmcleaning.ca/natalie-cooze/">Natalie Cooze</a></li>
+            <li><a href="https://www.cmcleaning.ca/awards-and-achievements/">Awards and Achievements</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.cmcleaning.ca/services/">Services <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3l4 4 4-4"/></svg></a>
+          <ul class="sub">
+            <li><a href="https://www.cmcleaning.ca/residential-services/">Residential Services</a></li>
+            <li><a href="https://www.cmcleaning.ca/commercial-office-cleaning/">Commercial Office Cleaning</a></li>
+            <li><a href="https://www.cmcleaning.ca/renovation-clean-up/">Renovation Clean Up</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.cmcleaning.ca/faq/">FAQ</a></li>
+        <li><a href="https://www.cmcleaning.ca/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn header-cta" href="https://www.cmcleaning.ca/contact/">Book a Cleaning
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker mono">Welcome to C.M. Cleaning</p>
+      <h1>We don't cut <em>corners,<svg viewBox="0 0 300 24" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2 20C90 2 210 -2 298 8C215 8 95 12 2 20Z"/></svg></em> we clean them.</h1>
+      <p class="lede">CM Cleaning Ltd. is committed to providing an <b>overall excellent cleaning experience</b> to all our customers. Whether you are looking for a one-time clean, a commercial office clean or construction clean, we make sure to handle each job with the same meticulous attention to detail.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.cmcleaning.ca/contact/">Get A Free Estimate
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+        <a class="btn ghost" href="tel:+17802011199">(780) 201-1199</a>
+      </div>
+    </div>
+    <div class="hero-art corners rv">
+      <span class="c3"></span><span class="c4"></span>
+      <div class="panel">
+        <img class="ph" src="images/hero.jpg" alt="A freshly cleaned, sunlit room" onerror="this.remove()">
+      </div>
+      <div class="tag">
+        <span class="mono">Cold Lake &middot; Bonnyville</span>
+        <p>Servicing Cold Lake, Bonnyville, and surrounding Lakeland areas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="creds">
+    <div class="wrap">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Licensed, Bonded &amp; Insured</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>WCB Covered</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>WHIMIS and First Aid Certified</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Over 10 Years Experience</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES INDEX -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Our <em>Services</em></h2>
+      <p>Residential, commercial, industrial and construction cleaning, each job handled with the same meticulous attention to detail.</p>
+    </div>
+    <div class="idx">
+      <ul class="rows">
+        <li class="row active rv" data-i="0">
+          <a href="https://www.cmcleaning.ca/residential-services/">
+            <span class="num">01</span>
+            <h3>Residential Cleaning</h3>
+            <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
+            <p>A recurring clean, weekly, bi-weekly or monthly, or a one-time clean, tailored to each client's request.</p>
+            <ul class="tags"><li>Regular</li><li>Luxury</li><li>Deep Clean</li><li>Customize</li></ul>
+          </a>
+        </li>
+        <li class="row rv" data-i="1">
+          <a href="https://www.cmcleaning.ca/commercial-office-cleaning/">
+            <span class="num">02</span>
+            <h3>Commercial &amp; Industrial</h3>
+            <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
+            <p>A professional cleaning system for businesses of any size, built around a safe and healthy work environment for all working personnel.</p>
+            <ul class="tags"><li>Offices</li><li>Medical Clinics</li><li>Oil and Gas Sector</li><li>Police Stations</li><li>Auto Dealerships</li><li>Financial Institutions</li><li>Schools</li><li>&amp; More!</li></ul>
+          </a>
+        </li>
+        <li class="row rv" data-i="2">
+          <a href="https://www.cmcleaning.ca/renovation-clean-up/">
+            <span class="num">03</span>
+            <h3>Construction &amp; Renovation</h3>
+            <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
+            <p>Renovation clean up and construction clean, from small projects to new 4 story construction complexes.</p>
+          </a>
+        </li>
+      </ul>
+      <div class="pane corners rv" aria-hidden="true">
+        <span class="c3"></span><span class="c4"></span>
+        <div class="panel">
+          <div class="slide on"><img class="ph" src="images/residential.jpg" alt="" onerror="this.remove()"><span class="label">Residential Cleaning</span></div>
+          <div class="slide"><img class="ph" src="images/commercial.jpg" alt="" onerror="this.remove()"><span class="label">Commercial &amp; Industrial</span></div>
+          <div class="slide"><img class="ph" src="images/construction.jpg" alt="" onerror="this.remove()"><span class="label">Construction &amp; Renovation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METICULOUS -->
+<section class="detail">
+  <div class="wrap grid">
+    <div class="txt">
+      <h2 class="rv">Meticulous <em>and Detailed</em></h2>
+      <p class="big rv">We guarantee dependability, consistency, and great results.</p>
+      <p class="rv">Our cleaning professionals are very meticulous and detailed. Our professional cleaning staff have an eye for detail and take pride in their work.</p>
+      <p class="rv">We provide <strong>FREE consultations</strong> to get a good understanding of our customers' individual needs to ensure the highest results.</p>
+      <ul class="guar rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5"/></svg>Dependability</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5"/></svg>Consistency</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5"/></svg>Great results</li>
+      </ul>
+    </div>
+    <div class="badge-wrap rv">
+      <div class="badge">
+        <div class="dots"></div>
+        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+          <text><textPath href="#circ" textLength="536" lengthAdjust="spacing">Free consultations &bull; Free consultations &bull;</textPath></text>
+        </svg>
+        <div class="core"><img src="images/logo.png" alt="CM Cleaning Ltd."></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE -->
+<section class="scale">
+  <div class="wrap">
+    <div class="top">
+      <div class="years rv">10+<small>years</small></div>
+      <div class="txt rv">
+        <h2>Professional <em>and Knowledgeable</em></h2>
+        <p>CM Cleaning Ltd. has over 10 years experience with all aspects of cleaning. We have handled some of the biggest and toughest projects. We have the knowledge and proficiency to give our customers a peace of mind.</p>
+      </div>
+    </div>
+    <div class="ruler rv">
+      <div class="ends">
+        <div class="end l">
+          <svg viewBox="0 0 120 78" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 40L60 6l54 34M16 34v38h88V34"/><path d="M50 72V50h20v22M82 46h14v14H82z"/></svg>
+          <span>1000 square foot bungalows</span>
+        </div>
+        <div class="mid" aria-hidden="true"></div>
+        <div class="end r">
+          <svg viewBox="0 0 90 130" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M8 126V8h74v118M2 126h86"/><path d="M8 34h74M8 62h74M8 90h74"/><path d="M22 18h12M46 18h12M22 44h12M46 44h12M22 72h12M46 72h12M22 100h12M46 100h12"/></svg>
+          <span>New 4 story construction complexes</span>
+        </div>
+      </div>
+    </div>
+    <div class="more rv"><a class="btn ghost" href="https://www.cmcleaning.ca/about/">Learn More About Us
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="wrap">
+    <div class="card rv">
+      <div class="pic"><img src="images/natalie-cooze.webp" alt="Natalie Cooze" width="148" height="148"></div>
+      <div>
+        <h3>Natalie Cooze</h3>
+        <p class="role mono">CEO and Founder</p>
+        <p class="s">CM Cleaning Ltd. is committed to providing an overall excellent cleaning experience to all our customers. We make sure to handle each job with the same meticulous attention to detail.</p>
+      </div>
+      <div class="soc">
+        <a href="https://www.facebook.com/natcooze/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/nataliecmcleaning/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://ca.linkedin.com/in/natalie-cooze-373b67a4" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book">
+  <div class="wrap">
+    <p class="mono rv">Book a cleaning</p>
+    <a class="num rv" href="tel:+17802011199">1-780-201-1199</a>
+    <svg class="swoosh rv" viewBox="0 0 600 30" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2 26C180 4 420 -2 598 10C430 10 190 14 2 26Z"/></svg>
+    <p class="tagline rv">We Don't Cut Corners, We Clean Them!</p>
+    <div class="actions rv">
+      <a class="btn brass" href="https://www.cmcleaning.ca/contact/">Get A Free Estimate
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+      <a class="btn ghost" href="https://www.cmcleaning.ca/contact/">Book a Cleaning</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="logo-w" src="images/logo.png" alt="CM Cleaning Ltd.">
+        <p class="about">CM Cleaning Ltd. is committed to providing an overall excellent cleaning experience to all our customers. We make sure to handle each job with the same meticulous attention to detail.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://www.cmcleaning.ca/residential-services/">Residential Services</a></li>
+          <li><a href="https://www.cmcleaning.ca/commercial-office-cleaning/">Commercial Office Cleaning</a></li>
+          <li><a href="https://www.cmcleaning.ca/renovation-clean-up/">Renovation Clean Up</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://www.cmcleaning.ca/about/">About Us</a></li>
+          <li><a href="https://www.cmcleaning.ca/products/">Benefect Products</a></li>
+          <li><a href="https://www.cmcleaning.ca/natalie-cooze/">Natalie Cooze</a></li>
+          <li><a href="https://www.cmcleaning.ca/awards-and-achievements/">Awards and Achievements</a></li>
+          <li><a href="https://www.cmcleaning.ca/faq/">FAQ</a></li>
+          <li><a href="https://www.cmcleaning.ca/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Book a cleaning</h4>
+        <a class="tel" href="tel:+17802011199">1-780-201-1199</a>
+        <p>Servicing Cold Lake, Bonnyville, and surrounding Lakeland areas.</p>
+        <div class="soc">
+          <a href="https://www.facebook.com/natcooze/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/nataliecmcleaning/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://ca.linkedin.com/in/natalie-cooze-373b67a4" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="bar">
+      <span>CM Cleaning Ltd. &copy; 2026 All Rights Reserved</span>
+      <span>Design by <a href="https://www.dallaswebagency.us/" target="_blank" rel="noopener">Dallas Web Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var body=document.body;
+  var btn=document.querySelector('.menu-btn');
+  btn.addEventListener('click',function(){
+    var open=body.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded',open);
+  });
+
+  // services index: hover / focus switches the image pane
+  var rows=[].slice.call(document.querySelectorAll('.row'));
+  var slides=[].slice.call(document.querySelectorAll('.pane .slide'));
+  function activate(i){
+    rows.forEach(function(r,k){r.classList.toggle('active',k===i)});
+    slides.forEach(function(s,k){s.classList.toggle('on',k===i)});
+  }
+  rows.forEach(function(r,i){
+    r.addEventListener('mouseenter',function(){activate(i)});
+    r.addEventListener('focusin',function(){activate(i)});
+  });
+
+  // reveal on scroll
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
